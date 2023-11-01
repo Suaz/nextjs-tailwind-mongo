@@ -23,7 +23,8 @@ const ThemeProvider = ({ children }: { children: ReactNode }) => {
   }
 
   useEffect(() => {
-    handleThemeChange()
+    console.log('update')
+    // handleThemeChange()
   }, [mode])
 
   return (
