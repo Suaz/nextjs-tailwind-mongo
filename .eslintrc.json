@@ -5,6 +5,7 @@
     "plugin:tailwindcss/recommended"
   ],
   "rules": {
-    "comma-dangle": "off"
+    "comma-dangle": "off",
+    "indent": "off"
   }
 }
