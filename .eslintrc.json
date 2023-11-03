@@ -6,6 +6,12 @@
   ],
   "rules": {
     "comma-dangle": "off",
-    "indent": "off"
+    "indent": "off",
+    "space-in-parens": [
+      "error", "always"
+    ],
+    "template-curly-spacing": [
+      "error", "always"
+    ]
   }
 }

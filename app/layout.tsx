@@ -4,7 +4,7 @@ import { Inter, Space_Grotesk } from 'next/font/google'
 import type { Metadata } from 'next'
 
 import './globals.css'
-import ThemeProvider from '@/context/ThemeProvider'
+import { ThemeProvider } from '@/context/ThemeProvider'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -19,8 +19,8 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'SuperApp with Next',
-  description: 'A platform to ask questions, and get answers',
+  title: 'DevFlow',
+  description: 'A community-driven platform for asking and answering programming questions. Get help, share knowledge, and collaborate with developers from around the world. Explore topics in web development, mobile app development, algorithms, data structures, and more.',
   icons: {
     icon: '/assets/images/site-logo.svg'
   }
@@ -32,7 +32,6 @@ export default function RootLayout ({
   children: React.ReactNode
 }) {
   return (
-
     <html lang="en">
     <body className={ `${inter.variable} ${spaceGrotesk.variable}` }>
     <ClerkProvider
