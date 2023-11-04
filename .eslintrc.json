@@ -8,11 +8,20 @@
     "comma-dangle": "off",
     "indent": "off",
     "space-in-parens": [
-      "error", "always"
+      "error",
+      "always"
     ],
-    "space-in-brackets": ["error", "always"],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "array-bracket-spacing": [
+      "error",
+      "always"
+    ],
     "template-curly-spacing": [
-      "error", "always"
+      "error",
+      "always"
     ]
   }
 }
