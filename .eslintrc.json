@@ -10,6 +10,7 @@
     "space-in-parens": [
       "error", "always"
     ],
+    "space-in-brackets": ["error", "always"],
     "template-curly-spacing": [
       "error", "always"
     ]
