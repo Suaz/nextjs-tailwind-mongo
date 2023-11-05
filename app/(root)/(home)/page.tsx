@@ -4,6 +4,40 @@ import LocalSearchbar from '@/components/shared/search/LocalSearchbar'
 import Filter from '@/components/shared/filter/Filter'
 import { HomePageFilters } from '@/constants/filters'
 import HomeFilters from '@/components/home/HomeFilters'
+import NoResult from '@/components/shared/noResult'
+
+const questions = [
+  // {
+  //   _id: 1,
+  //   title: 'title1',
+  //   tags: [ { _id: 1, name: 'tag1' }, { _id: 2, name: 'tag2' } ],
+  //   author: 'jhon doe',
+  //   upvotes: 10,
+  //   views: 100,
+  //   answers: 2,
+  //   createdAt: new Date()
+  // },
+  // {
+  //   _id: 2,
+  //   title: 'title2',
+  //   tags: [ { _id: 1, name: 'tag1' }, { _id: 2, name: 'tag2' } ],
+  //   author: 'jhon doe',
+  //   upvotes: 10,
+  //   views: 100,
+  //   answers: 2,
+  //   createdAt: new Date()
+  // },
+  // {
+  //   _id: 3,
+  //   title: 'title3',
+  //   tags: [ { _id: 1, name: 'tag1' }, { _id: 2, name: 'tag2' } ],
+  //   author: 'jhon doe',
+  //   upvotes: 10,
+  //   views: 100,
+  //   answers: 2,
+  //   createdAt: new Date()
+  // },
+]
 
 export default function Home () {
   return (
@@ -35,6 +69,24 @@ export default function Home () {
 
       </div>
       <HomeFilters/>
+
+      <div className={ 'mt-10 flex w-full flex-col gap-6' }>
+        {
+          questions.length > 0
+            ? (
+              questions.map( ( question ) => (
+                <div>{ question.title }</div>
+              ) ) )
+            : (
+              <NoResult
+                title={ 'No Questions Found' }
+                description={ 'Try searching something else or ask a question to start a new thread' }
+                buttonText={ 'Ask Question' }
+                buttonLink={ '/ask-question' }
+              />
+            )
+        }
+      </div>
     </>
   )
 }
